@@ -14,6 +14,7 @@ yarn jar /opt/cloudera/parcels/CDH/jars/hadoop-mapreduce-examples-2.6.0-cdh5.8.3
 ```
 * Copy your partner's file to your target directory 
     * Let one partner use `distCp` on the command line
+
 ```
 The command looked like hadoop distcp hdfs://34.253.82.44/user/rcassiau /user/dboyer
 Using internal IPs, this part did not work because of the lack of communication between internal addresses at AMAZON.
@@ -50,6 +51,7 @@ Found 7 items
 -rw-r--r--   3 dboyer-ibm dboyer-ibm   85333300 2017-10-17 15:36 /user/dboyer-ibm/test2/part-m-00005
 ```
 
+    * Let one partner use `distCp` on the command line
     * Let the other use BDR
 Romain used BDR
 
