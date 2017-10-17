@@ -1,19 +1,23 @@
----------------------------------------------------------------------
 1.vm.swappiness
 
+```
 [root@ip-172-31-42-52 ~]# sysctl vm.swappiness
 vm.swappiness = 1
+```
 
 ---------------------------------------------------------------------
 2.Show the mount attributes of all volumes
 
 
+```
 SUMMARY :
 /dev/mapper/centos-root on / type xfs (rw,noatime,attr2,inode64,noquota)
 /dev/xvda1 on /boot type xfs (rw,noatime,attr2,inode64,noquota)
 /dev/xvdb1 on /data1 type xfs (rw,noatime,attr2,inode64,noquota)
+```
 
 
+```
 ALL : 
 sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
 proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
@@ -43,23 +47,24 @@ debugfs on /sys/kernel/debug type debugfs (rw,relatime)
 /dev/xvda1 on /boot type xfs (rw,noatime,attr2,inode64,noquota)
 tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=1497312k,mode=700,uid=1000,gid=1000)
 /dev/xvdb1 on /data1 type xfs (rw,noatime,attr2,inode64,noquota)
+```
 
 
----------------------------------------------------------------------
 3.Show the reserve space of any non-root, ext-based volumes 
 XFS was used, so there is no such attributes
 
----------------------------------------------------------------------
 4.Disable transparent hugepage support
 
+```
 [root@ip-172-31-42-52 ~]# cat /sys/kernel/mm/transparent_hugepage/enabled 
 always madvise [never]
 [root@ip-172-31-42-52 ~]# cat /sys/kernel/mm/transparent_hugepage/defrag
 always madvise [never]
-[root@ip-172-31-42-52 ~]# 
+```
 
----------------------------------------------------------------------
 5. List your network interface configuration
+
+```
 [root@ip-172-31-42-52 ~]# ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -70,10 +75,11 @@ always madvise [never]
     inet 172.31.42.52/20 brd 172.31.47.255 scope global dynamic eth0
        valid_lft 3142sec preferred_lft 3142sec
 [root@ip-172-31-42-52 ~]# 
+```
 
----------------------------------------------------------------------
 6. List forward and reverse host lookups using getent or nslookup
 
+```
 [root@ip-172-31-42-52 ~]# nslookup ip-172-31-42-52
 Server:         172.31.0.2
 Address:        172.31.0.2#53
@@ -81,9 +87,11 @@ Address:        172.31.0.2#53
 Non-authoritative answer:
 Name:   ip-172-31-42-52.eu-west-1.compute.internal
 Address: 172.31.42.52
+```
 
----------------------------------------------------------------------
 7. Show the nscd service is running
+
+```
 root@ip-172-31-42-52 ~]# systemctl status nscd
 ● nscd.service - Name Service Cache Daemon
    Loaded: loaded (/usr/lib/systemd/system/nscd.service; enabled; vendor preset: disabled)
@@ -92,11 +100,12 @@ root@ip-172-31-42-52 ~]# systemctl status nscd
  Main PID: 2634 (nscd)
    CGroup: /system.slice/nscd.service
            └─2634 /usr/sbin/nscd
+```
 
 
 8. Show the ntpd service is running
 
----------------------------------------------------------------------
+```
 [root@ip-172-31-42-52 ~]# systemctl status ntpd
 ● ntpd.service - Network Time Service
    Loaded: loaded (/usr/lib/systemd/system/ntpd.service; enabled; vendor preset: disabled)
@@ -104,3 +113,4 @@ root@ip-172-31-42-52 ~]# systemctl status nscd
  Main PID: 664 (ntpd)
    CGroup: /system.slice/ntpd.service
            └─664 /usr/sbin/ntpd -u ntp:ntp -g
+```
