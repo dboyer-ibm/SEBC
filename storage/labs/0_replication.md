@@ -51,9 +51,8 @@ Found 7 items
 -rw-r--r--   3 dboyer-ibm dboyer-ibm   85333300 2017-10-17 15:36 /user/dboyer-ibm/test2/part-m-00005
 ```
 
-    * Let one partner use `distCp` on the command line
     * Let the other use BDR
-Romain used BDR
+      Romain used BDR
 
 * Browse the results 
     * Use `hdfs fsck <path> -files -blocks` on your source and target directories
