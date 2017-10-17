@@ -78,7 +78,8 @@ sys     0m0.331s
     * Use the `time` command to report the job's duration
     * Land the result under your user's home directory
 ```
-[dboyer-ibm@ip-172-31-34-71 ~]$ time hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-mapreduce-examples-2.6.0-cdh5.8.3.jar terasort /user/dboyer-ibm/10gb /user/dboyer-ibm/10gb-sort                17/10/17 16:19:48 INFO terasort.TeraSort: starting
+[dboyer-ibm@ip-172-31-34-71 ~]$ time hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-mapreduce-examples-2.6.0-cdh5.8.3.jar terasort /user/dboyer-ibm/10gb /user/dboyer-ibm/10gb-sort
+17/10/17 16:19:48 INFO terasort.TeraSort: starting
 17/10/17 16:19:50 INFO input.FileInputFormat: Total input paths to process : 4
 Spent 255ms computing base-splits.
 Spent 6ms computing TeraScheduler splits.
