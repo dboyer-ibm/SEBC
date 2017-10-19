@@ -1,3 +1,4 @@
+```
 [libdefaults]
 default_realm = DBO.IBM
 dns_lookup_kdc = false
@@ -15,3 +16,4 @@ DBO.IBM = {
 kdc = ip-172-31-45-199.eu-west-1.compute.internal
 admin_server = ip-172-31-45-199.eu-west-1.compute.internal
 }
+```
