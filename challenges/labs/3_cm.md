@@ -8,13 +8,15 @@
 ```
 [hdfs@ip-172-31-44-121 ~]$ hdfs dfs -ls /user
 Found 6 items
+```
 drwxr-xr-x   - ernest  ernest           0 2017-10-20 11:34 /user/ernest
+```
 drwxrwxrwx   - mapred  hadoop           0 2017-10-20 11:30 /user/history
 drwxrwxr-t   - hive    hive             0 2017-10-20 11:31 /user/hive
 drwxrwxr-x   - hue     hue              0 2017-10-20 11:32 /user/hue
 drwxrwxr-x   - oozie   oozie            0 2017-10-20 11:32 /user/oozie
+```
 drwxr-xr-x   - siwicki siwicki          0 2017-10-20 11:34 /user/siwicki
-
 ```
     * The output from the CM API call `../api/v14/hosts`
 ```
