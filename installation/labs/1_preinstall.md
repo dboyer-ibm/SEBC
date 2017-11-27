@@ -49,10 +49,15 @@ tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=1497312k,mode=
 /dev/xvdb1 on /data1 type xfs (rw,noatime,attr2,inode64,noquota)
 ```
 
+---------------------------------------------------------------------
 
 3.Show the reserve space of any non-root, ext-based volumes 
-XFS was used, so there is no such attributes
 
+```
+XFS was used, so there is no such attributes
+```
+
+---------------------------------------------------------------------
 4.Disable transparent hugepage support
 
 ```
@@ -60,6 +65,11 @@ XFS was used, so there is no such attributes
 always madvise [never]
 [root@ip-172-31-42-52 ~]# cat /sys/kernel/mm/transparent_hugepage/defrag
 always madvise [never]
+[root@ip-172-31-42-52 ~]# sysctl -a | grep hugepage
+vm.hugepages_treat_as_movable = 0
+vm.nr_hugepages = 0
+vm.nr_hugepages_mempolicy = 0
+vm.nr_overcommit_hugepages = 0
 ```
 
 5. List your network interface configuration
