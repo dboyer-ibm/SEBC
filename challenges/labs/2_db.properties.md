@@ -8,6 +8,7 @@
 
 
 ```
+# <Missing auto-generation timestamp line>
 #
 # For information describing how to configure the Cloudera Manager Server
 # to connect to databases, see the "Cloudera Manager Installation Guide."
