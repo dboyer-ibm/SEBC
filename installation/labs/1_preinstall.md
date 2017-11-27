@@ -5,7 +5,6 @@
 vm.swappiness = 1
 ```
 
----------------------------------------------------------------------
 2.Show the mount attributes of all volumes
 
 
@@ -49,15 +48,12 @@ tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=1497312k,mode=
 /dev/xvdb1 on /data1 type xfs (rw,noatime,attr2,inode64,noquota)
 ```
 
----------------------------------------------------------------------
-
 3.Show the reserve space of any non-root, ext-based volumes 
 
 ```
 XFS was used, so there is no such attributes
 ```
 
----------------------------------------------------------------------
 4.Disable transparent hugepage support
 
 ```
@@ -97,6 +93,38 @@ Address:        172.31.0.2#53
 Non-authoritative answer:
 Name:   ip-172-31-42-52.eu-west-1.compute.internal
 Address: 172.31.42.52
+
+[root@ip-172-31-42-52 ~]# nslookup ip-172-31-39-197
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+Non-authoritative answer:
+Name:   ip-172-31-39-197.eu-west-1.compute.internal
+Address: 172.31.39.197
+
+[root@ip-172-31-42-52 ~]# nslookup ip-172-31-34-71
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+Non-authoritative answer:
+Name:   ip-172-31-34-71.eu-west-1.compute.internal
+Address: 172.31.34.71
+
+[root@ip-172-31-42-52 ~]# nslookup ip-172-31-43-28
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+Non-authoritative answer:
+Name:   ip-172-31-43-28.eu-west-1.compute.internal
+Address: 172.31.43.28
+
+[root@ip-172-31-42-52 ~]# nslookup ip-172-31-45-199
+Server:         172.31.0.2
+Address:        172.31.0.2#53
+
+Non-authoritative answer:
+Name:   ip-172-31-45-199.eu-west-1.compute.internal
+Address: 172.31.45.199
 ```
 
 7. Show the nscd service is running
