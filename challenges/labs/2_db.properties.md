@@ -19,3 +19,4 @@ com.cloudera.cmf.db.user=scm
 com.cloudera.cmf.db.password=scm
 com.cloudera.cmf.db.setupType=EXTERNAL
 ```
+Hand-editing or copying this file, while not a technical problem, is something we discourage in the field. However clunky the `scm_prepare_database.sh` file is to use, it reliably generates the appropriate file, and leaves markers to show the file was machine-generated.
